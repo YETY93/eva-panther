@@ -1,7 +1,9 @@
 export interface UsuarioInt {
     id?: number,
-    name: string,
+    nameUser: string,
     lastName: string,
-    phone: string,
-    email: string
+    phoneNumber: string,
+    user: string,
+    password: string,
+    roles: string
 }

@@ -10,7 +10,8 @@ import { AdminModel } from '../model/adminModel';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type':  'application/json'
+    'Content-Type':  'application/json',
+    'authorization': '750e8b43e5ed564462c90ef0d382db26'
   })
 };
 
