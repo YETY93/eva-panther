@@ -1,0 +1,11 @@
+<div class="login">
+    <div class="login-triangle"></div>
+    
+    <h2 class="login-header">Log in</h2>
+  
+    <form class="login-container">
+      <p><input type="text" placeholder="Nombre de usuario" name="user" [(ngModel)]="modelDataAdmin.user" [ngModelOptions]="{standalone: true}"></p>
+      <p><input type="password" placeholder="Password" name="password" [(ngModel)]="modelDataAdmin.password" ></p>
+      <button type="submit" class="btn btn-primary" (click)="loginAdmin()">Acceder</button>
+    </form>
+  </div>

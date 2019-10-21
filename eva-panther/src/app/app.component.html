@@ -1,0 +1,142 @@
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>{{title}} <img src="../assets/logos/evaLogo.png" width="35" height="35" alt=""></h3>
+
+            <strong><img src="../assets/logos/evaLogo.png" width="35" height="35" alt=""></strong>
+        </div>
+
+        <ul class="list-unstyled components ">
+            <li>
+                <a [routerLink]="['/herramientas']" routerLinkActive="router-link-active" >
+                    <i class="fas fa-toolbox"></i>
+                    Herramientas
+                </a>
+            </li>
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-cubes "></i>
+                    Comienza
+                </a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a [routerLink]="['/proyecto-uno']" routerLinkActive="router-link-active">Proyecto 1</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/proyecto-dos']" routerLinkActive="router-link-active" >Proyecto 2</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/proyecto-tres']" routerLinkActive="router-link-active" >Proyecto 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-copy"></i>
+                    Recursos
+                </a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a [routerLink]="['/recursos-externos']" routerLinkActive="router-link-active" >Externos</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li *ngIf="loginAdmin">
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-user-cog"></i>
+                    Admin
+                </a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a [routerLink]="['/admin-usuarios']" routerLinkActive="router-link-active" >Usuarios</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/admin-roles']" routerLinkActive="router-link-active" >Roles</a>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="https://github.com/jnpinzonv/panther.git" class="download">Descargar panther</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top"
+            style="background: linear-gradient(135deg,rgb(110, 143, 251),#988dc1);">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-exchange-alt"></i>
+
+                    <span></span>
+                </button>
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active">
+                                <i class="fas fa-home"></i>
+                                Inicio
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/actualidad']" routerLinkActive="router-link-active">
+                                <i class="fas fa-newspaper"></i>
+                                Actualidad
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/quienesSomos']" routerLinkActive="router-link-active">
+                                <i class="fas fa-users"></i>
+                                Nosotros
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active">
+                                <i class="fas fa-user-shield"></i>
+                                {{nombreUsuario}}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- 
+        <h2>Collapsible Sidebar Using Bootstrap 4</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <div class="line"></div>
+
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <div class="line"></div>
+
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <div class="line"></div>
+
+        <h3>Lorem Ipsum Dolor</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div> -->
+
+        <router-outlet></router-outlet>
+    </div>
+
+</div>

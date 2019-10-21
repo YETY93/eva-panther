@@ -1,0 +1,27 @@
+.carousel-item div h4{ 
+    background: rgba(105, 105, 165, 0.637);
+    font-size: 40px;
+    
+}
+.SeccionDos{
+    padding-top: 25px;
+}
+
+.temas {
+    /* background-image: url('../../../assets/temas/fondoTemas.png'); */
+    color: white;
+    padding-top: 10px;
+    margin-left:20px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 25px #494ca2 inset;
+    border-radius: 20px;
+}
+#temaImpar {
+    background:#0c99c1;
+}
+#temaPar {
+    background: #c446fc;
+}
+.btn-secondary{
+    background: #4f5caa;
+}

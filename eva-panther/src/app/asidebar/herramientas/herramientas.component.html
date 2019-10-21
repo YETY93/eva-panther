@@ -1,0 +1,71 @@
+<div class="container-fluid">
+  <h2>
+    Algunas herramientas que te pueden interesar
+  </h2>
+  <hr class="my-4">
+  <div class="my-4">
+    <p>
+      A continuación, encontraras un listado útil de herramientas, que de seguro ya conoces o sino, las vas conocer,
+      porque van a ser útiles para seguir adelante con tu aprendizaje.
+    </p>
+  </div>
+  <h2>Entornos de desarrollo (IDE) </h2>
+<div *ngFor="let ide of listaIdes">
+  <div class="card mb-3 my-4" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img [src]="ide.logoUrl" class="card-img" alt="Logo del Ide">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ide.nombre}}</h5>
+          <p class="card-text">{{ide.descripcion}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer d-flex justify-content-end">
+          <a class="btn btn-info" [href]="ide.link">Obtener </a> 
+    </div>
+  </div>
+</div>
+<h2>Editores de Código</h2>
+<div *ngFor="let edit of listaEditores">
+  <div class="card mb-3 my-4" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img [src]="edit.logoUrl" class="card-img" alt="Logo del Editor">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{edit.nombre}}</h5>
+          <p class="card-text">{{edit.descripcion}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer d-flex justify-content-end">
+          <a class="btn btn-info" [href]="edit.link">Obtener </a> 
+    </div>
+  </div>
+</div>
+<h2>Herraminetaspara desarrollo</h2>
+<div *ngFor="let herramienta of listaHerramientas">
+  <div class="card mb-3 my-4" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img [src]="herramienta.logoUrl" class="card-img" alt="Logo de la herramienta">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{herramienta.nombre}}</h5>
+          <p class="card-text">{{herramienta.descripcion}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer d-flex justify-content-end">
+          <a class="btn btn-info" [href]="herramienta.link">Obtener </a> 
+    </div>
+  </div>
+</div>
+
+
+</div>

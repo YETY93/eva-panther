@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kalam|Lobster&display=swap');
+
+.sidebar-header{
+    font-family: 'Kalam', cursive;
+}
+/* nav{
+    
+    font-family: 'Lobster', cursive;
+
+} */
+
+.carousel-item div h4{ 
+    font-family: 'Lobster', cursive;
+}
+
