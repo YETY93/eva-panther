@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginComponent } from './navbar/login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -11,15 +12,26 @@ import { Component } from '@angular/core';
 export class AppComponent{
   title = 'eva-panther';
   loginAdmin: boolean;
+  nombreUsuario: string;
 
 
   constructor() {
 
 
   }
-  ngOnInit() {
-
-      this.loginAdmin = true;
-
+  // tslint:disable-next-line: use-life-cycle-interface
+  ngOnInit () {
+    this.nombreUsuario = 'Admin';
+    this.mostrarLogin();
   }
+  
+mostrarLogin() {
+  if (localStorage.getItem('usuario')) {
+    this.nombreUsuario = localStorage.getItem('usuario');
+    this.loginAdmin = true;
+  } else {
+    this.loginAdmin = false;
+  }
+}
+
 }

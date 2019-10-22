@@ -1,11 +1,23 @@
-<div class="login">
+<div class="login" *ngIf="estadoSesion == false">
     <div class="login-triangle"></div>
     
-    <h2 class="login-header">Log in</h2>
+    <h2 class="login-header">Inicira sesion</h2>
   
     <form class="login-container">
       <p><input type="text" placeholder="Nombre de usuario" name="user" [(ngModel)]="modelDataAdmin.user" [ngModelOptions]="{standalone: true}"></p>
       <p><input type="password" placeholder="Password" name="password" [(ngModel)]="modelDataAdmin.password" ></p>
       <button type="submit" class="btn btn-primary" (click)="loginAdmin()">Acceder</button>
     </form>
-  </div>
+</div>
+<div class="login" *ngIf="estadoSesion == true">
+  <div class="login-triangle"></div>
+  
+  <h2 class="login-header">Cerrar sesion</h2>
+
+  <form class="login-container">
+    <p><input type="text" placeholder="Nombre de usuario" name="user" [(ngModel)]="modelDataAdmin.user" [ngModelOptions]="{standalone: true}" disabled></p>
+    <p><input type="password" placeholder="Password" name="password" [(ngModel)]="modelDataAdmin.password" disabled></p>
+    <button type="submit" class="btn btn-primary col-6" (click)="loginAdmin()" disabled>Acceder</button>
+    <button type="submit" class="btn btn-danger  col-6" (click)="logAut()">Salir</button>
+  </form>
+</div>
