@@ -33,5 +33,8 @@ mostrarLogin() {
     this.loginAdmin = false;
   }
 }
+traerUsuario(nombreU: string){
+ nombreU = localStorage.getItem('usuario');
+}
 
 }
