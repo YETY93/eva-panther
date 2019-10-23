@@ -79,6 +79,7 @@ export class UsuariosComponent implements OnInit {
     console.log(user);
     this.usersService.editUser(user, id).subscribe(
       (editUser)=> {
+        console.log("sirve");
         console.log (editUser);
         
         this.traerUsuarios();

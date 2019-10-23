@@ -59,12 +59,11 @@ class Users extends Request
         $keyApi = UserAction::getKeyAPI();
 
         $statement->bindParam(1, $encryptPassword);
-        $statement->bindParam(2, $keyApi);
-        $statement->bindParam(3, $object->roles);
-        $statement->bindParam(4, $id);
-        $statement->bindParam(5, $object->nameUser);
-        $statement->bindParam(6, $object->lastName);
-        $statement->bindParam(7, $object->phoneNumber);
+        $statement->bindParam(2, $object->roles);
+        $statement->bindParam(3, $object->nameUser);
+        $statement->bindParam(4, $object->lastName);
+        $statement->bindParam(5, $object->phoneNumber);
+        $statement->bindParam(6, $id);
     }
 }
 ?>

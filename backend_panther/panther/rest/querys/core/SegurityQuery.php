@@ -10,7 +10,7 @@
  * Constante de consultas base de datos
  */
 define("INTSERT_USER", "INSERT INTO j4user(user,password,keyAPI,roles, nameUser, lastName, phoneNumber) VALUES(?,?,?,?,?,?,?);");
-define("UPDATE_USER", "UPDATE j4user SET  password = ?, keyAPI = ?, roles = ?, nameUser = ?, lastName = ?, phoneNumber = ? WHERE id=? ;");
+define("UPDATE_USER", "UPDATE j4user SET  password = ?, roles = ?, nameUser = ?, lastName = ?, phoneNumber = ? WHERE id=? ;");
 define("SELECT_USER", "SELECT password,user,keyAPI,roles, nameUser, lastName, phoneNumber FROM j4user WHERE user like ?");
 define("VERIFY_KEYAPI", "SELECT COUNT(user) FROM j4user WHERE keyAPI=?");
 
