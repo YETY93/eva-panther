@@ -56,42 +56,29 @@
     </form>
   </div>
 </div>
-<!-- <div class="container-fluid" *ngIf="editSection"> -->
+<div class="container-fluid" *ngIf="editSection">
 
-  <!-- <h1> Update </h1>
+  <h1> Update </h1>
   <div>
-    <form *ngFor="let data of user">
+    <form *ngFor="let data of rol">
       <div class="form-group">
-        <label>First Name: <b>{{data.nameUser}} </b> </label>
-        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="data.nameUser"
-          [ngModelOptions]="{standalone: true}" placeholder="{{data.nameUser}} " required>
+        <label>Name of Rol: <b>{{data.name}} </b> </label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="data.name"
+          [ngModelOptions]="{standalone: true}" placeholder="{{data.name}} " required>
       </div>
 
 
       <div class="form-group">
-        <label>Last Name: <b>{{data.lastName}} </b></label>
-        <input type="text" class="form-control" aria-describedby="Last Name" [(ngModel)]="data.lastName"
-          [ngModelOptions]="{standalone: true}" placeholder="{{data.lastName}}" required>
+        <label>Description of Rol <b>{{data.description}} </b></label>
+        <input type="text" class="form-control" aria-describedby="Description" [(ngModel)]="data.description"
+          [ngModelOptions]="{standalone: true}" placeholder="{{data.description}}" required>
       </div>
 
       <div class="form-group">
-        <label>Phone: <b>{{data.phone}} </b> </label>
-        <input type="number" class="form-control" aria-describedby="phone" placeholder="{{data.phone}}"
-          [(ngModel)]="data.phone" [ngModelOptions]="{standalone: true}" required>
-      </div>
-
-      <div class="form-group">
-        <label>Email address: <b>{{data.email}} </b></label>
-        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="{{data.email}}"
-          [(ngModel)]="data.email" [ngModelOptions]="{standalone: true}" required>
-
-      </div>
-
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary" (click)="editUsuario(data.id, data)">Save update</button>
+        <button type="submit" class="btn btn-primary" (click)="editRol(data.id, data)">Save update</button>
       </div>
 
     </form>
   </div>
 </div>
- -->
+
