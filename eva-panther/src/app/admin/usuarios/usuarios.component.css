@@ -5,6 +5,21 @@
 }
 
 .bigicon {
-    font-size: 35px;
+    font-size: 20px;
     color: #36A0FF;
+    margin-right: 8px;
+}
+.nuevoUser{
+    /* padding: 10px 5px 10px 10px; */
+    border-radius: 10px;
+    background: rgba(214, 217, 253, 0.815) !important;
+}
+
+.editUser{
+    /* padding: 10px 5px 10px 10px; */
+    border-radius: 10px;
+    background: rgba(214, 217, 253, 0.815) !important;
+}
+.btn{
+    margin-right: 5px;
 }

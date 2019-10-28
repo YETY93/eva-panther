@@ -24,22 +24,9 @@ export class ConecRestService {
   
 
   constructor(private http: HttpClient) { 
-/*     
-    this.headers.append('Content-Type' , 'application/json');
-    this.headers.append('authorization' , `${localStorage.getItem('keyAPI')}`);
-    console.log("cabeceras"+ localStorage.getItem('keyAPI'));
-    console.log(this.headers); */
-  }
-/*  obtenerHeaders(){
-  const headers= new HttpHeaders();
-  if(localStorage.getItem('keyAPI')) {
-    console.log(localStorage.getItem('keyAPI'));
-    headers.append('Content-Type' , 'application/json');
-    headers.append('authorization' , localStorage.getItem('keyAPI'));
 
   }
-  return console.log(headers);
- } */
+
 
   getUsers():Observable<any>{
     return this.http.get<UsuarioInt>(this.urlbackUsers, httpOptions);

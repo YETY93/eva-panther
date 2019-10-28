@@ -9,7 +9,7 @@
 
         <ul class="list-unstyled components ">
             <li>
-                <a [routerLink]="['/herramientas']" routerLinkActive="router-link-active" >
+                <a [routerLink]="['/herramientas']" routerLinkActive="router-link-active">
                     <i class="fas fa-toolbox"></i>
                     Herramientas
                 </a>
@@ -24,10 +24,10 @@
                         <a [routerLink]="['/proyecto-uno']" routerLinkActive="router-link-active">Proyecto 1</a>
                     </li>
                     <li>
-                        <a [routerLink]="['/proyecto-dos']" routerLinkActive="router-link-active" >Proyecto 2</a>
+                        <a [routerLink]="['/proyecto-dos']" routerLinkActive="router-link-active">Proyecto 2</a>
                     </li>
                     <li>
-                        <a [routerLink]="['/proyecto-tres']" routerLinkActive="router-link-active" >Proyecto 3</a>
+                        <a [routerLink]="['/proyecto-tres']" routerLinkActive="router-link-active">Proyecto 3</a>
                     </li>
                 </ul>
             </li>
@@ -38,7 +38,7 @@
                 </a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
-                        <a [routerLink]="['/recursos-externos']" routerLinkActive="router-link-active" >Externos</a>
+                        <a [routerLink]="['/recursos-externos']" routerLinkActive="router-link-active">Externos</a>
                     </li>
 
                 </ul>
@@ -50,10 +50,10 @@
                 </a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
-                        <a [routerLink]="['/admin-usuarios']" routerLinkActive="router-link-active" >Usuarios</a>
+                        <a [routerLink]="['/admin-usuarios']" routerLinkActive="router-link-active">Usuarios</a>
                     </li>
                     <li>
-                        <a [routerLink]="['/admin-roles']" routerLinkActive="router-link-active" >Roles</a>
+                        <a [routerLink]="['/admin-roles']" routerLinkActive="router-link-active">Roles</a>
                     </li>
 
                 </ul>
@@ -106,11 +106,17 @@
                             </a>
                         </li>
                         <li class="nav-item" *ngIf="loginAdmin">
-                            <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active" >
+                            <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active">
                                 <i class="fas fa-user-shield"></i>
                                 {{nombreUsuario}}
-                              
                             </a>
+                        </li>
+                        <li class="nav-item" *ngIf="loginAdmin">
+                                <a class="nav-link" [routerLink]="['/routePath']" routerLinkActive="router-link-active"  (click)="salir() " >
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    Salir
+                                </a>
+                                
                         </li>
                     </ul>
                 </div>
