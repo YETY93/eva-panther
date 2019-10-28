@@ -8,20 +8,38 @@ import { RolInt } from '../model/rolModel';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
-    'authorization': '750e8b43e5ed564462c90ef0d382db26'
+    'authorization': localStorage.getItem('keyAPI')
   })
-};
-
+}
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class ConecRestService {
 
   private urlback = 'http://localhost/backend_panther/panther/rest/';
   private urlbackUsers =  `${this.urlback}users/`;
   private urlbackRol =  `${this.urlback}roles/`;
+  
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+/*     
+    this.headers.append('Content-Type' , 'application/json');
+    this.headers.append('authorization' , `${localStorage.getItem('keyAPI')}`);
+    console.log("cabeceras"+ localStorage.getItem('keyAPI'));
+    console.log(this.headers); */
+  }
+/*  obtenerHeaders(){
+  const headers= new HttpHeaders();
+  if(localStorage.getItem('keyAPI')) {
+    console.log(localStorage.getItem('keyAPI'));
+    headers.append('Content-Type' , 'application/json');
+    headers.append('authorization' , localStorage.getItem('keyAPI'));
+
+  }
+  return console.log(headers);
+ } */
 
   getUsers():Observable<any>{
     return this.http.get<UsuarioInt>(this.urlbackUsers, httpOptions);
@@ -34,7 +52,6 @@ export class ConecRestService {
   
   addUser(usuarioInt:UsuarioInt):Observable<any>{
     let body = JSON.stringify( usuarioInt );
-    console.log (body);
     return this.http.post( `${this.urlbackUsers}`, body , httpOptions);
   }
 
@@ -72,7 +89,4 @@ export class ConecRestService {
     return this.http.delete(`${this.urlbackRol}${id}`,httpOptions);
     }
   
-  
-
-
 }

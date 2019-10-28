@@ -12,16 +12,18 @@ import { LoginComponent } from './navbar/login/login.component';
 export class AppComponent{
   title = 'eva-panther';
   loginAdmin: boolean;
-  nombreUsuario: string;
+  nombreUsuario: string = 'Admin';
+
 
 
   constructor() {
 
 
   }
+  
   // tslint:disable-next-line: use-life-cycle-interface
   ngOnInit () {
-    this.nombreUsuario = 'Admin';
+    this.nombreUsuario = localStorage.getItem('usuario');
     this.mostrarLogin();
   }
   
@@ -32,6 +34,9 @@ mostrarLogin() {
   } else {
     this.loginAdmin = false;
   }
+}
+traerUsuario(){
+ this.nombreUsuario = sessionStorage.getItem('usuario');
 }
 
 }

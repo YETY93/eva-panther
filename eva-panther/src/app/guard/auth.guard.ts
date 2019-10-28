@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-import { LoginComponent } from '../navbar/login/login.component';
+import { ConecPantherService } from '../services/conec-panther.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { LoginComponent } from '../navbar/login/login.component';
 
 export class AuthGuard implements CanActivate {
 
-  constructor( private autenticado: LoginComponent,
+  constructor( private autenticado: ConecPantherService,
                private router: Router ) {
 
   }

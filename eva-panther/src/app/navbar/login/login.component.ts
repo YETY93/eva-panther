@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { AdminModel } from 'src/app/model/adminModel';
 import { ConecPantherService } from 'src/app/services/conec-panther.service';
 import { Router } from '@angular/router';
@@ -9,8 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  estadoSesion:boolean;
+  estadoSesion: boolean;
   modelDataAdmin: AdminModel = {
     user: '',
     password: '',
@@ -20,8 +19,8 @@ export class LoginComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-    this.estaLogueado();
     this.estadoSesion = false;
+   
   }
 
   loginAdmin() {
@@ -33,28 +32,18 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('usuario', this.modelDataAdmin.nameUser);
         localStorage.setItem('keyAPI', this.modelDataAdmin.keyAPI);
         this.estadoSesion = true;
-        
-        // this.router.navigateByUrl('/home');
         alert('Ha ingresado correctamente');
-
+        this.router.navigateByUrl('/home');
       } else {
-        alert('Contraseña o usuarioincorrecto');
-        this.estadoSesion = false;
+      alert('Contraseña o usuarioincorrecto');
+      this.estadoSesion = false;
+      localStorage.clear();
       }
     });
   }
 
-  estaLogueado(): boolean {
-    if (localStorage.getItem('keyAPI')) {
-      this.estadoSesion = true;
-      return true;
-    } else {
-      return false;
-    }
-  }
-
   logAut() {
-  localStorage.clear();
+    localStorage.clear();
   this.router.navigateByUrl('/home');
   }
 
