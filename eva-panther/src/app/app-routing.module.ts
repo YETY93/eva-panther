@@ -24,8 +24,8 @@ const routes: Routes = [
   { path: 'proyecto-dos'  , component: ProyectoDosComponent },
   { path: 'proyecto-tres'  , component: ProyectoTresComponent },
   { path: 'recursos-externos'  , component: ExternosComponent },
-  { path: 'admin-usuarios'  , component: UsuariosComponent, canActivate: [AuthGuard] },
-  { path: 'admin-roles'  , component: RolesComponent, canActivate: [AuthGuard] },
+  { path: 'admin-usuarios'  , component: UsuariosComponent },
+  { path: 'admin-roles'  , component: RolesComponent },
   {path: '**', redirectTo: 'home'}
 ];
 

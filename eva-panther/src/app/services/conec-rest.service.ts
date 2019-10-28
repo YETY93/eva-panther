@@ -8,7 +8,7 @@ import { RolInt } from '../model/rolModel';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
-    'authorization': localStorage.getItem('keyAPI')
+    'authorization': '750e8b43e5ed564462c90ef0d382db26'
   })
 };
 
