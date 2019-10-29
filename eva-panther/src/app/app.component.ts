@@ -27,7 +27,6 @@ export class AppComponent implements DoCheck {
     this.mostrarLogin();
   }
   ngDoCheck() {
-    console.log('dochek')
     this.nombreUsuario = localStorage.getItem('usuario');
     this.mostrarLogin();
   }

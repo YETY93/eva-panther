@@ -47,11 +47,13 @@ export class UsuariosComponent implements OnInit {
   traerUsuarios() {
     this.usersService.getUsers().subscribe(dataUsuarios => {
       if (dataUsuarios.code != 200) {
-        console.log(dataUsuarios);
+        window.location.reload();
       } else {
         this.users = dataUsuarios.data;
+        
       }
     }, error => {
+      window.location.reload();
       console.log(<any>error);
     });
   }
@@ -67,21 +69,18 @@ export class UsuariosComponent implements OnInit {
   nuevoUsuario() {
     this.usersService.addUser(this.modelUser).subscribe(
       (newUser) => {
+        
         this.modelUser = newUser.data;
-        console.log(this.modelUser);
         this.newSection = false;
         this.traerUsuarios();
+      }, error => {
+        alert("Revise los datos ingresados e intente nuevamente")
       });
   }
 
   editUsuario(id, user) {
-    console.log(id);
-    console.log(user);
     this.usersService.editUser(user, id).subscribe(
       (editUser)=> {
-        console.log("sirve");
-        console.log (editUser);
-        
         this.traerUsuarios();
         this.editSection = false;
       });
@@ -90,7 +89,6 @@ export class UsuariosComponent implements OnInit {
   deleteUser(id) {
     this.usersService.deletUser(id).subscribe(
       () => {
-        console.log(id);
         alert('Elemento borrado');
         window.location.reload();
       });
