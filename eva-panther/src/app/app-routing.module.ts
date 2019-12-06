@@ -1,3 +1,9 @@
+/**
+ * @description Clase  que contiene el enrutamiento para los distintos apartados
+ * del aplicativo
+ * @author Yesid Rangel
+ */
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './navbar/home/home.component';
@@ -13,7 +19,10 @@ import { UsuariosComponent } from './admin/usuarios/usuarios.component';
 import { RolesComponent } from './admin/roles/roles.component';
 import { AuthGuard } from './guard/auth.guard';
 
-
+/**
+ * elemento que contine las variantes de
+ * las distintas rutas
+ */
 const routes: Routes = [
   { path: 'home'  , component: HomeComponent },
   { path: 'quienesSomos'  , component: QuienesSomosComponent },

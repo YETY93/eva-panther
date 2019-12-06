@@ -1,4 +1,5 @@
 <div class="container">
+  <!-- Aca se mostrara el listadod de roles y su administracion -->
   <h1>ROLES</h1>
   <ul>
     <button type="submit" class="btn btn-success" (click)="activateNew() ">New Rol</button>
@@ -32,8 +33,8 @@
 
 
 <div class="container-fluid" *ngIf="newSection">
-
-  <h1> Register </h1>
+<!-- permite egregar roles personalizados -->
+  <h1> Nuevo rol </h1>
   <div>
     <form>
       <div class="form-group">
@@ -58,7 +59,8 @@
 </div>
 <div class="container-fluid" *ngIf="editSection">
 
-  <h1> Update </h1>
+  <!-- Actualiza los roles -->
+  <h1> Actualizar rol </h1>
   <div>
     <form *ngFor="let data of rol">
       <div class="form-group">

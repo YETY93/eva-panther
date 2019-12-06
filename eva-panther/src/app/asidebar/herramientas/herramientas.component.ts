@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {Herramienta} from './model/heramienta'
+/**
+ * @description Clase  que contiene los metodos 
+ * para visualizar las herraminetas recomendadas
+ * par el desarrollo
+ * 
+ * @author Yesid Rangel
+ */
 
 @Component({
   selector: 'app-herramientas',
@@ -8,6 +15,11 @@ import {Herramienta} from './model/heramienta'
 })
 export class HerramientasComponent implements OnInit {
 
+  /** 
+   *Se declaran las variables globales a 
+   *utilizar sobre las listas de herraminetas
+   */
+  
   ide_1: Herramienta;
   ide_2: Herramienta;
   ide_3: Herramienta;
@@ -23,8 +35,15 @@ export class HerramientasComponent implements OnInit {
   herramineta_3: Herramienta;
   listaHerramientas:Herramienta[]
 
+  /**
+   *Constructor de la Clase
+   */
   constructor() { }
 
+  /**
+   * Metodo que se ejecuta cuando inicial el componente
+   * y la lista de las diferentes herramientas recomemdadas
+   */
   ngOnInit() {
     this.ide_1= {
       id:1,
@@ -107,7 +126,11 @@ export class HerramientasComponent implements OnInit {
       descripcion:"Es una distribución de Apache completamente gratuita y fácil de instalar que contiene MariaDB, PHP y Perl. El paquete de instalación de XAMPP ha sido diseñado para ser increíblemente fácil de instalar y usar.",
       link:"https://www.apachefriends.org/es/index.html"
     }
-    this.listaHerramientas=[
+
+  /**
+ * lista contenedor de herramientas recomendadas
+ */
+    this.listaHerramientas = [
       this.herramineta_1,
       this.herramineta_2,
       this.herramineta_3,

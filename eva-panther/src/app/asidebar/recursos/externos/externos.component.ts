@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Recurso } from './model/recurso';
 
+/**
+ * @description Clase  que contiene la informacion y los
+ * metodos de los recursos adicionales para mejorar el aprendizaje
+ * 
+ * @author Saray Burbano
+ */
+
 @Component({
   selector: 'app-externos',
   templateUrl: './externos.component.html',
@@ -8,6 +15,10 @@ import { Recurso } from './model/recurso';
 })
 export class ExternosComponent implements OnInit {
 
+    /** 
+   *Se declaran las variables globales a 
+   *utilizar sobre las listas de recursos 
+   */
 public name: string = 'Externos';
 
  recurso_1 : Recurso;
@@ -30,9 +41,14 @@ public name: string = 'Externos';
 
  listaRecursos: Recurso[];
 
-
+  /**
+   *Constructor de la Clase
+   */
   constructor() { }
-
+  /**
+   * Metodo que se ejecuta cuando inicial el componente
+   * y la lista de las diferentes recusos recomemdadas
+   */
   ngOnInit() {
     this.recurso_1 = {
       id:1,
@@ -125,7 +141,9 @@ public name: string = 'Externos';
       descripcion:"Encontrarás cursos diplomados con certificado gratuitos",
       link:"https://docs.microsoft.com/es-es/dotnet/standard/base-types/regular-expression-language-quick-reference"
     };
-
+/**
+ * lista contenedor de recursos
+ */
     this.listaRecursos = [
       this.recurso_1,
       this.recurso_2,

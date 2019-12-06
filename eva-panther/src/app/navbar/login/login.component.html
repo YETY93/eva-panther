@@ -1,3 +1,6 @@
+<!-- fomulario donde se igresan los 
+  datos de inicio de sesión -->
+
 <div class="login" *ngIf="estadoSesion == false">
     <div class="login-triangle"></div>
     
@@ -14,6 +17,8 @@
   
   <h2 class="login-header">Cerrar sesion</h2>
 
+  <!-- LLamados a metodos para el ingreso o cierre
+     de la sesion de usuario -->
   <form class="login-container">
     <p><input type="text" placeholder="Nombre de usuario" name="user" [(ngModel)]="modelDataAdmin.user" [ngModelOptions]="{standalone: true}" disabled></p>
     <p><input type="password" placeholder="Password" name="password" [(ngModel)]="modelDataAdmin.password" disabled></p>
